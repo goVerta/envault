@@ -164,7 +164,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## License
 
-MIT © [Verta](https://github.com/verta)
+MIT © [Verta](https://github.com/goverta)
 
 We build tools that don't waste your time.
 
@@ -173,7 +173,7 @@ We build tools that don't waste your time.
 <div align="center">
 
 **Connect**  
-[Instagram](https://instagram.com/go.verta) • [GitHub](https://github.com/verta) • [Email](mailto:verta.connect@gmail.com)
+[Instagram](https://instagram.com/go.verta) • [GitHub](https://github.com/goverta) • [Email](mailto:verta.connect@gmail.com)
 
 <sub>Built with care by the Verta team</sub>
 
