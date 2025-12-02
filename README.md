@@ -8,7 +8,7 @@
 
 [![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat&logo=go&logoColor=white)](https://go.dev)
 [![MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Alpha-orange?style=flat)](https://github.com/verta/envault)
+[![Status](https://img.shields.io/badge/Status-Alpha-orange?style=flat)](https://github.com/goverta/envault)
 
 </div>
 
@@ -58,7 +58,7 @@ Git-safe encrypted environment variables. One command to sync with your team.
 ## Quick Start
 ```bash
 # Install (coming soon)
-go install github.com/verta/envault@latest
+go install github.com/goverta/envault@latest
 
 # Setup in your project
 cd your-project
@@ -153,7 +153,7 @@ A: Not yet. Soon. Star the repo for updates.
 
 We're building in public. Jump in:
 ```bash
-git clone https://github.com/verta/envault
+git clone https://github.com/goverta/envault
 cd envault
 go run main.go
 ```
@@ -164,7 +164,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## License
 
-MIT © [Verta](https://github.com/goverta)
+MIT © [goVerta](https://github.com/goverta)
 
 We build tools that don't waste your time.
 
@@ -175,6 +175,6 @@ We build tools that don't waste your time.
 **Connect**  
 [Instagram](https://instagram.com/go.verta) • [GitHub](https://github.com/goverta) • [Email](mailto:verta.connect@gmail.com)
 
-<sub>Built with care by the Verta team</sub>
+<sub>Built with care by the goVerta team</sub>
 
 </div>
