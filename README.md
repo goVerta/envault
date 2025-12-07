@@ -2,11 +2,11 @@
 
 <div align="center">
 
-### Encrypted secrets. Zero paranoia.
+### Encrypted secrets. Zero paranoia. Maximum flow.
 
-> 🚧 **Shipping soon** - Building in public
+> 🚧 **Shipping soon** — built in public, fueled by caffeine & chaos
 
-[![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat&logo=go&logoColor=white)](https://go.dev)
+[![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat\&logo=go\&logoColor=white)](https://go.dev)
 [![MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Alpha-orange?style=flat)](https://github.com/goverta/envault)
 
@@ -16,51 +16,58 @@
 
 ## The Problem
 
-Your `.env` file is a security nightmare. One accidental commit away from disaster.
+`.env` files age like milk.
+One misplaced commit, one “quick push”, and you’ve accidentally speed-ran a security breach.
 
-Sharing secrets via Slack? Even worse.
-
-## The Solution
-```bash
-envault init                           # Setup encrypted vault
-envault set API_KEY sk_live_dangerous  # Encrypted instantly
-envault push                           # Safe to commit
-envault run -- npm start               # Just works
-```
-
-Git-safe encrypted environment variables. One command to sync with your team.
+Sharing secrets on Slack? That’s basically leaving them on a public billboard.
 
 ---
 
-## Why
+## The Solution
 
-| Old Way | envault Way |
-|---------|-------------|
-| Copy `.env.example` | `envault init` |
-| Slack secrets around | `git pull` |
-| Pray you didn't commit | `git push` (encrypted) |
-| Different `.env` files | One source of truth |
-| Secrets in 5 places | One vault |
+```bash
+envault init                           # Create secure vault
+envault set API_KEY sk_live_dangerous  # Encrypt on the spot
+envault push                           # Safe to commit
+envault run -- npm start               # Auto-loads decrypted vars
+```
+
+Git-safe encrypted environment variables with zero drama.
+One command and your whole team is synced.
+
+---
+
+## Why envault?
+
+| The Old Way                    | The envault Way        |
+| ------------------------------ | ---------------------- |
+| Copy `.env.example`            | `envault init`         |
+| Pass secrets in Slack          | `git pull`             |
+| Pray you didn't commit secrets | `git push` (encrypted) |
+| Different `.env` everywhere    | One vault, same truth  |
+| Secrets scattered everywhere   | One secure home        |
 
 ---
 
 ## Features
 
-- **AES-256 encryption** - Industry standard
-- **Git-friendly** - Encrypted vault, safe to commit
-- **Multi-environment** - dev, staging, production
-- **Zero dependencies** - Single 5MB binary
-- **Team sync** - Git-based collaboration
-- **Works everywhere** - Any language, any framework
+* **AES-256-GCM encryption** — modern, rock-solid cryptography
+* **Git-friendly** — commit the vault without a mini heart attack
+* **Multi-environment** — dev, staging, prod
+* **Zero dependencies** — a single tiny binary
+* **Team sync** — works with your existing Git workflow
+* **Works anywhere** — language-agnostic, framework-agnostic
+* **Offline-first** — no servers, no logins, no monthly fees
 
 ---
 
 ## Quick Start
+
 ```bash
 # Install (coming soon)
 go install github.com/goverta/envault@latest
 
-# Setup in your project
+# Initialize a project
 cd your-project
 envault init
 
@@ -69,96 +76,99 @@ envault set DATABASE_URL postgres://prod.db/app
 envault set STRIPE_KEY sk_live_xyz
 envault set NODE_ENV production
 
-# Generate .env for local dev
+# Generate local .env
 envault local
 
-# Run with environment variables
+# Run your app with injected variables
 envault run -- npm start
 envault run --env staging -- npm test
 
-# Sync with team
-envault push  # Commit encrypted vault
-envault pull  # Pull latest changes
+# Sync with your team using git
+envault push
+envault pull
 ```
 
 ---
 
 ## How It Works
+
 ```
-1. Variables encrypted with AES-256-GCM
-2. Vault committed to git (.envault/*.enc)
-3. Team shares encryption key once (via 1Password, etc.)
-4. Everyone syncs via normal git workflow
+1. Secrets encrypted using AES-256-GCM
+2. Encrypted vault stored in git under .envault/
+3. Team shares one encryption key (once)
+4. Everyone stays synced through normal git pushes/pulls
 ```
 
-**Local-first.** Works offline. No servers. No accounts. No monthly fees.
+Local-first, minimalistic, developer-centric.
+No dashboards. No vendor lock-in. No SaaS bills.
 
 ---
 
 ## Roadmap
-```
-[████████░░░░░░] 50% to v0.1.0
 
-✅  Encryption engine
-✅  Core CLI structure  
-🚧  Multi-environment
+```
+[████████░░░░░░] 50% → v0.1.0
+
+✔️  Encryption engine
+✔️  Core CLI
+🚧  Multi-environment support
 🚧  Git integration
 📋  Team workflows
-📋  CI/CD docs
+📋  CI/CD usage docs
 ```
 
-**Want it now?** Star the repo. We'll notify you when v0.1 ships.
+Want early access? Smash that ⭐ on the repo.
 
 ---
 
 ## Philosophy
 
-**Secrets should be boring.** Set once, forget forever.
+Secrets should not be exciting.
+They should sit quietly in a vault doing their job.
 
-**Git is your sync layer.** No servers, no accounts, no BS.
+Git is the best sync system you already use — envault simply teaches it a new trick.
 
-**Local-first.** Works offline, always.
-
-**Zero config.** Just works.
+Everything local. Everything simple. Everything fast.
 
 ---
 
 ## FAQ
 
-**Q: Why not just use git-crypt?**  
-A: git-crypt encrypts entire files. envault gives you per-variable control, environments, and better DX.
+**Q: Why not git-crypt?**
+A: git-crypt encrypts *files*. envault encrypts *variables*, handles environments, and delivers way better DX.
 
-**Q: What about 1Password/Doppler/Infisical?**  
-A: Great tools, but they cost money and require servers. envault is free, offline, and git-based.
+**Q: Why not 1Password/Doppler/Infisical?**
+A: Amazing tools — but they require servers, accounts, and money. envault is free, offline, and built around Git.
 
-**Q: How do I share the encryption key?**  
-A: Via 1Password, secure email, or in person. Key setup is one-time per developer.
+**Q: How do I share the key?**
+A: Pass it once through something secure (1Password, SMS over VPN, carrier pigeon—your call).
 
-**Q: Is this production ready?**  
-A: Not yet. Soon. Star the repo for updates.
+**Q: Production-ready?**
+A: Not yet. Progress is rapid though. Follow the repo for updates.
 
 ---
 
 ## Coming Soon
 
-- `envault import` - Migrate from existing .env files
-- `envault rotate` - Key rotation
-- `envault audit` - Change history
-- IDE plugins (VSCode, JetBrains)
-- CI/CD integration guides
+* `envault import` — slurp existing `.env` files
+* `envault rotate` — painless key rotation
+* `envault audit` — change history
+* VSCode / JetBrains extensions
+* CI/CD guides for GitHub Actions, GitLab, Jenkins, etc.
 
 ---
 
 ## Contributing
 
-We're building in public. Jump in:
+Building in public → contributions welcome.
+
 ```bash
 git clone https://github.com/goverta/envault
 cd envault
 go run main.go
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+Check out `CONTRIBUTING.md` for guidelines.
 
 ---
 
@@ -166,15 +176,15 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 MIT © [goVerta](https://github.com/goverta)
 
-We build tools that don't waste your time.
+We build tools that stay out of your way and out of your nightmares.
 
 ---
 
 <div align="center">
 
-**Connect**  
+**Connect**
 [Instagram](https://instagram.com/go.verta) • [GitHub](https://github.com/goverta) • [Email](mailto:verta.connect@gmail.com)
 
-<sub>Built with care by the goVerta team</sub>
+<sub>Crafted with care by the goVerta team</sub>
 
 </div>
